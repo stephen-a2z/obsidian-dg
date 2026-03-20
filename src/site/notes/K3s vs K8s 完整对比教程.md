@@ -86,30 +86,40 @@ containerd config default | sudo tee /etc/containerd/config.toml
 sudo systemctl restart containerd
 
 # 2. 安装 kubeadm/kubelet/kubectl
+
+```bash
 sudo apt-get install -y apt-transport-https ca-certificates curl
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
+```
 
 # 3. 关闭 swap
+```bash
 sudo swapoff -a
+```
 
 # --- Master 节点 ---
+```bash
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 mkdir -p $HOME/.kube
 sudo cp /etc/kubernetes/admin.conf $HOME/.kube/config
+```
 
 # 4. 安装 CNI（以 Calico 为例）
+```bash
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/calico.yaml
-
+```
 # --- Worker 节点 ---
+```bash
 sudo kubeadm join <master-ip>:6443 --token <token> --discovery-token-ca-cert-hash sha256:<hash>
+```
 
 
 ### K3s 安装
 
-bash
+```bash
 # --- Server 节点（一条命令）---
 curl -sfL https://get.k3s.io | sh -
 
@@ -124,7 +134,8 @@ sudo k3s kubectl get nodes
 # 或复制 kubeconfig
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 
-
+```
+```
 安装时间对比：K8s 约 30-60 分钟 vs K3s 约 30 秒。
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
