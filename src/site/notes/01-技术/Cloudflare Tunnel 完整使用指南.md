@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Cloudflare Tunnel 完整使用指南/","created":"2026-03-12T11:46:22.686+08:00","updated":"2026-03-20T14:21:48.051+08:00"}
+{"dg-publish":true,"permalink":"/01-技术/Cloudflare Tunnel 完整使用指南/","created":"2026-03-12T11:46:22.686+08:00","updated":"2026-03-20T15:23:32.671+08:00"}
 ---
 
 # Cloudflare Tunnel 完整使用指南
@@ -292,10 +292,12 @@ ingress:
 
 ## 12. 配置文件位置
 
-- **Linux:** /etc/cloudflared/config.yml 或 ~/.cloudflared/config.yml
-- **macOS:** ~/.cloudflared/config.yml
-- **Credentials:** ~/.cloudflared/<tunnel-id>.json
-- **Cert:** ~/.cloudflared/cert.pem
+```
+ **Linux:** /etc/cloudflared/config.yml 或 ~/.cloudflared/config.yml
+ **macOS:** ~/.cloudflared/config.yml
+ **Credentials:** `~/.cloudflared/<tunnel-id>.json`
+ **Cert:** ~/.cloudflared/cert.pem
+```
 
 ## 常见问题
 
@@ -311,20 +313,3 @@ A: 检查本地服务是否运行，查看 cloudflared 日志
 Q: 想用不同的配置文件？
 A: cloudflared tunnel --config /path/to/config.yml run my-tunnel
 
-
-<script src="https://giscus.app/client.js"
-        data-repo="stephen-a2z/obsidian-dg"
-        data-repo-id="R_kgDORqY3bA"
-        data-category="General"
-        data-category-id="DIC_kwDORqY3bM4C41nD"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark_protanopia"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/K3s vs K8s 完整对比教程/","created":"2026-03-19T18:12:41.806+08:00","updated":"2026-03-20T11:19:49.397+08:00"}
+{"dg-publish":true,"permalink":"/01-技术/K3s vs K8s 完整对比教程/","created":"2026-03-19T18:12:41.806+08:00","updated":"2026-03-20T11:19:49.397+08:00"}
 ---
 
 # K3s vs K8s 完整对比教程

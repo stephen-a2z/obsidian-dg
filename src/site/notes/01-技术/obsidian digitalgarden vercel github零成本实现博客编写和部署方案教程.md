@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/obsdian digitalgarden vercel github零成本实现博客编写和部署方案教程/","created":"2026-03-20T11:27:34.666+08:00","updated":"2026-03-20T11:40:08.156+08:00"}
+{"dg-publish":true,"permalink":"/01-技术/obsidian digitalgarden vercel github零成本实现博客编写和部署方案教程/","tags":["obsidian"],"created":"2026-03-20T11:27:34.666+08:00","updated":"2026-03-20T15:26:32.968+08:00"}
 ---
 
 
@@ -131,13 +131,11 @@ dg-publish: true
 
 常用 frontmatter 属性：
 
-```
-yaml
+```yaml
 ---
 dg-publish: true
 dg-note-icon: 1        # 笔记图标样式
 dg-pinned: true         # 置顶
-dg-created: 2026-03-20  # 创建日期
 tags: [技术, 教程]       # 标签
 ---
 ```
