@@ -259,6 +259,7 @@ sudo rm -rf /etc/kubernetes /var/lib/etcd ~/.kube
 ## 八、选型决策树
 
 你的场景是什么？
+```
 │
 ├─ 边缘/IoT/ARM 设备 ──────────────────→ K3s
 ├─ 开发/测试/CI 环境 ──────────────────→ K3s
@@ -275,7 +276,7 @@ sudo rm -rf /etc/kubernetes /var/lib/etcd ~/.kube
    ├─ GCP GKE
    ├─ Azure AKS
    └─ DigitalOcean DOKS
-
+```
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
