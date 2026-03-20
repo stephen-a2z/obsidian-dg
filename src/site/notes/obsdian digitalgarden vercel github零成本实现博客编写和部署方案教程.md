@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/obsdian digitalgarden vercel github零成本实现博客编写和部署方案教程/"}
+{"dg-publish":true,"permalink":"/obsdian digitalgarden vercel github零成本实现博客编写和部署方案教程/","created":"2026-03-20T11:27:34.666+08:00","updated":"2026-03-20T11:40:08.156+08:00"}
 ---
 
 

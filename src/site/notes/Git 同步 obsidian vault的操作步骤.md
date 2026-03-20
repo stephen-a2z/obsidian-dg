@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Git 同步 obsidian vault的操作步骤/"}
+{"dg-publish":true,"permalink":"/Git 同步 obsidian vault的操作步骤/","created":"2026-03-20T11:58:46.770+08:00","updated":"2026-03-20T12:00:21.224+08:00"}
 ---
 
 

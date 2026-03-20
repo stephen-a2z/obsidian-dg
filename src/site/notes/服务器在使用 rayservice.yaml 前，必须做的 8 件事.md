@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/服务器在使用 rayservice.yaml 前，必须做的 8 件事/"}
+{"dg-publish":true,"permalink":"/服务器在使用 rayservice.yaml 前，必须做的 8 件事/","created":"2026-03-19T17:35:11.011+08:00","updated":"2026-03-19T17:50:35.457+08:00"}
 ---
 
 
