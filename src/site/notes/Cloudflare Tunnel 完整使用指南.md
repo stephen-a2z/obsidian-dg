@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Cloudflare Tunnel 完整使用指南/","tags":["技术"],"created":"2026-03-12T11:46:22.686+08:00","updated":"2026-03-20T13:48:29.104+08:00"}
+{"dg-publish":true,"permalink":"/Cloudflare Tunnel 完整使用指南/","created":"2026-03-12T11:46:22.686+08:00","updated":"2026-03-20T14:13:24.658+08:00"}
 ---
 
 
@@ -310,3 +310,21 @@ A: 检查本地服务是否运行，查看 cloudflared 日志
 
 Q: 想用不同的配置文件？
 A: cloudflared tunnel --config /path/to/config.yml run my-tunnel
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="stephen-a2z/obsidian-dg"
+        data-repo-id="R_kgDORqY3bA"
+        data-category="General"
+        data-category-id="DIC_kwDORqY3bM4C41nD"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="dark_protanopia"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -92,7 +92,7 @@ dg-home: true
 ---
 如下图, 可以使用快捷键`cmd + p`添加properties, 然后将添加的properties的类型设置为checkbox
 
-![Pasted image 20260320112909.png](/img/user/Pasted%20image%2020260320112909.png)
+![Pasted image 20260320112909.png](/img/user/assets/Pasted%20image%2020260320112909.png)
 
 
 - dg-publish: true — 标记这篇文章要发布
