@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Cloudflare Tunnel 完整使用指南/"}
+{"dg-publish":true,"permalink":"/Cloudflare Tunnel 完整使用指南/","tags":["技术","教程"]}
 ---
 
 
