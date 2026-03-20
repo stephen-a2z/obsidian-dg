@@ -2,8 +2,6 @@
 {"dg-publish":true,"permalink":"/K3s vs K8s 完整对比教程/"}
 ---
 
-
----
 # K3s vs K8s 完整对比教程
 
 ## 一、什么是 K8s 和 K3s
