@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-技术/obsidian digitalgarden vercel github零成本实现博客编写和部署方案教程/","tags":["obsidian"],"created":"2026-03-20T11:27:34.666+08:00","updated":"2026-03-20T15:26:32.968+08:00"}
+{"dg-publish":true,"permalink":"/01-技术/obsidian digitalgarden vercel github零成本实现博客编写和部署方案教程/","tags":["obsidian"],"created":"2026-03-20T11:27:34.666+08:00","updated":"2026-03-20T16:21:57.471+08:00"}
 ---
 
 
@@ -207,4 +207,7 @@ tags: [技术, "C#"]              # 含特殊字符的 tag 加引号
 - **单篇发布 vs 批量发布**：修改多篇后建议用 Publish Multiple Notes 一次性同步，避免遗漏
 
 简单来说，文件名保持简洁、纯英文或纯中文无空格最稳，frontmatter 严格遵守 YAML 格式，链接到的笔记记得也标记发布就行。
+
+## 参考
+- digital garden docs -  https://dg-docs.ole.dev/
 
