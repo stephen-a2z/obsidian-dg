@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/00-主页介绍/index.md/","title":"我的数字花园","tags":["首页","导航","gardenEntry"],"noteIcon":"","created":"2026-03-20T15:36:56.029+08:00","updated":"2026-03-20T17:27:21.775+08:00"}
+{"dg-publish":true,"permalink":"/00-主页介绍/index.md/","title":"我的数字花园","tags":["首页","导航","gardenEntry"],"noteIcon":"","created":"2026-03-20T15:36:56.029+08:00","updated":"2026-03-23T18:58:26.443+08:00"}
 ---
 
 --- 
@@ -19,3 +19,12 @@
 - [[生活随笔\|生活随笔]] 
 - 
 持续更新，欢迎常来看看
+
+
+## powered by:
+- obsidian
+- digital garden
+- github
+
+## 友情链接
+- https://vaults.obsidian-community.com/
