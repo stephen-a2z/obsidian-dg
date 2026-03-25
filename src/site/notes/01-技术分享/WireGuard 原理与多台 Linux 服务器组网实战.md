@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-技术分享/WireGuard 原理与多台 Linux 服务器组网实战/","title":"WireGuard 原理与多台 Linux 服务器组网实战","tags":["网络","技术","vpn","wireguard"],"noteIcon":"","created":"2026-03-25T20:20:15.257+08:00","updated":"2026-03-25T20:25:12.221+08:00"}
+{"dg-publish":true,"permalink":"/01-技术分享/WireGuard 原理与多台 Linux 服务器组网实战/","title":"WireGuard 原理与多台 Linux 服务器组网实战","tags":["网络","技术","vpn","wireguard"],"noteIcon":"","created":"2026-03-25T20:20:15.257+08:00","updated":"2026-03-25T20:26:26.055+08:00"}
 ---
 
 
@@ -64,7 +64,7 @@ UDP 包 (默认端口 51820)
 
 ### 2.2 安装 WireGuard
 
-bash
+```bash
 # Ubuntu/Debian
 apt update && apt install -y wireguard
 
@@ -73,7 +73,7 @@ dnf install -y wireguard-tools
 
 # 验证内核模块
 modprobe wireguard
-
+```
 
 ### 2.3 生成密钥对（每台机器都执行）
 
