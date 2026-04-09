@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-技术分享/reCAPTCHA V2 Checkbox/","title":"reCAPTCHA V2 Checkbox","tags":["clippings","验证码"],"noteIcon":"","created":"2026-04-09T12:52:53.064+08:00","updated":"2026-04-09T12:56:04.009+08:00"}
+{"dg-publish":true,"permalink":"/01-技术分享/reCAPTCHA V2 Checkbox/","title":"reCAPTCHA V2 Checkbox","tags":["clippings","验证码","转载"],"noteIcon":"","created":"2026-04-09T12:52:53.064+08:00","updated":"2026-04-09T13:05:00.868+08:00"}
 ---
 
 ## reCAPTCHA V2 Checkbox
@@ -37,8 +37,5 @@ Demo 样例（随时有可能变化，以实际情况为准）：
 
 访问 [reCAPTCHA 官网](https://www.google.com/recaptcha/about/)
 
-<iframe src="https://recaptcha-demo.appspot.com/recaptcha-v2-checkbox.php" height="700px"></iframe>
+<iframe src="https://recaptcha-demo.appspot.com/recaptcha-v2-checkbox.php" style="top:0;left:0;width:100%;height:700px;border:none;border-radius:8px;" ></iframe>
 
-[帮助我们改善此页](https://github.com/WuKongSecurity/SpiderAPI/edit/main/docs/02.%E9%AA%8C%E8%AF%81%E7%A0%81/03.%E5%9B%BD%E5%A4%96%E9%AA%8C%E8%AF%81%E7%A0%81/02.Google%20reCAPTCHA/01.reCAPTCHA%20V2%20Checkbox.md)
-
-上次更新: 2025/08/13, 15:01:58
