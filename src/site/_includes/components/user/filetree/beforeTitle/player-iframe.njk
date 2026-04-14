@@ -1,3 +1,53 @@
-<div id="fixed-header-container">
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=2&id=1394167216&auto=0&height=32"></iframe>
+
+<div style="
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  background: var(--bg); /* 继承 DG 背景色 */
+  border-bottom: 1px solid var(--border); /* 继承 DG 边框 */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+">
+  <!-- 外层容器：圆角、阴影、宽度跟随 DG -->
+  <div style="
+    width: min(100%, 420px);
+    border-radius: var(--radius); /* 继承 DG 圆角 */
+    overflow: hidden;
+    box-shadow: var(--shadow); /* 继承 DG 阴影 */
+    background: var(--bg);
+  ">
+    <iframe
+      frameborder="no"
+      border="0"
+      width="100%"
+      height="86"
+      src="https://music.163.com/outchain/player?type=2&id=1394167216&auto=0&height=32"
+      style="background: transparent;"
+    ></iframe>
+  </div>
 </div>
+
+<style>
+  /* 亮色主题 */
+  :root {
+    --dg-music-bg: var(--bg, #ffffff);
+    --dg-music-text: var(--text, #2d2a24);
+    --dg-music-primary: var(--primary, #b7e2d8);
+  }
+
+  /* 暗色主题（DG 自动切换） */
+  [data-theme="dark"] {
+    --dg-music-bg: var(--bg, #1e1e1e);
+    --dg-music-text: var(--text, #e0e0e0);
+    --dg-music-primary: var(--primary, #8abaae);
+  }
+
+  /* 覆盖 iframe 内部样式（核心） */
+  iframe[src*="music.163.com"] {
+    filter: none !important;
+    background: var(--dg-music-bg) !important;
+    color: var(--dg-music-text) !important;
+  }
+</style>
