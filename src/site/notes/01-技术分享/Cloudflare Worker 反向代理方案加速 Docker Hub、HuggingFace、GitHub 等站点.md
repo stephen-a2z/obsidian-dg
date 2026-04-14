@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-技术分享/Cloudflare Worker 反向代理方案加速 Docker Hub、HuggingFace、GitHub 等站点/","tags":["docker","cloudflare","github","中转","加速"],"noteIcon":"","created":"2026-04-10T15:32:23.177+08:00","updated":"2026-04-10T15:35:18.470+08:00"}
+{"dg-publish":true,"permalink":"/01-技术分享/Cloudflare Worker 反向代理方案加速 Docker Hub、HuggingFace、GitHub 等站点/","tags":["docker","cloudflare","github","中转","加速"],"noteIcon":"","created":"2026-04-10T15:32:23.177+08:00","updated":"2026-04-10T15:38:16.541+08:00"}
 ---
 
 
@@ -124,7 +124,6 @@ git clone https://github.yourdomain.com/user/repo.git
 
 - Cloudflare Workers 免费版每天 10 万次请求，一般个人使用足够
 - Worker 单次请求体大小限制 100MB（免费版），大文件下载可能受限
-- Docker 认证流程较复杂，上面的代码做了基本的 www-authenticate 头重写，如果遇到认证问题可
-能需要单独处理 auth.docker.io 的代理
+- Docker 认证流程较复杂，上面的代码做了基本的 www-authenticate 头重写，如果遇到认证问题可能需要单独处理 auth.docker.io 的代理
 - 建议开启 Cloudflare 的缓存规则，对静态资源设置缓存可进一步加速
 - 不要公开分享你的代理域名，避免被滥用导致 Cloudflare 封号
