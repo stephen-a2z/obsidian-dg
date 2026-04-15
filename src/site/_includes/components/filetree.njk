@@ -23,7 +23,7 @@
     
     <div x-init="isDesktop = (window.innerWidth>=1000) ? true: false;"
             x-on:resize.window="isDesktop = (window.innerWidth>=1000) ? true : false;"
-            x-data="{isDesktop: true, showFilesMobile: false}">
+            x-data="{isDesktop: true, showFilesMobile: false, sidebarOpen: $persist(true).as('dg-sidebar-open')}">
 
         <div x-show.important="!isDesktop" style="display: none;">
             {%include "components/filetreeNavbar.njk"%}
@@ -31,7 +31,10 @@
         
         <div x-show="showFilesMobile && !isDesktop" @click="showFilesMobile = false" style="display:none;" class="fullpage-overlay"></div>
 
-      <div class="filetree-wrapper" x-show.important="isDesktop || showFilesMobile" style="display: none;">
+      <button class="filetree-toggle" @click="sidebarOpen = !sidebarOpen" :class="{'is-collapsed': !sidebarOpen}" :title="sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'" x-show="isDesktop">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </button>
+      <div class="filetree-wrapper" :class="{'sidebar-collapsed': !sidebarOpen}" x-show.important="isDesktop || showFilesMobile" style="display: none;">
       <nav class="filetree-sidebar">
         {% for imp in dynamics.filetree.beforeTitle %}
             {% include imp %}
