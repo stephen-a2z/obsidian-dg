@@ -31,7 +31,7 @@
         
         <div x-show="showFilesMobile && !isDesktop" @click="showFilesMobile = false" style="display:none;" class="fullpage-overlay"></div>
 
-      <button class="filetree-toggle" @click="sidebarOpen = !sidebarOpen" :class="{'is-collapsed': !sidebarOpen}" :title="sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'" x-show="isDesktop">
+      <button class="filetree-toggle" @click="sidebarOpen = !sidebarOpen; $dispatch('filetree-toggle', {open: sidebarOpen})" :class="{'is-collapsed': !sidebarOpen}" :title="sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'" x-show="isDesktop">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
       </button>
       <div class="filetree-wrapper" :class="{'sidebar-collapsed': !sidebarOpen}" x-show.important="isDesktop || showFilesMobile" style="display: none;">

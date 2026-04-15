@@ -1,4 +1,4 @@
-<aside>
+<aside x-data="{open: localStorage.getItem('dg-sidebar-open') !== 'false'}" @filetree-toggle.window="open = $event.detail.open" x-show="open">
       <div class="sidebar">
             <div class="sidebar-container">
                   {% for imp in dynamics.sidebar.top %}
