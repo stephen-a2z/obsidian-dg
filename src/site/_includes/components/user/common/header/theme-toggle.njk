@@ -1,0 +1,24 @@
+<button class="theme-toggle" id="theme-toggle" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">
+  <span class="theme-toggle-icon"></span>
+</button>
+<script>
+(function() {
+  var btn = document.getElementById('theme-toggle');
+  var body = document.body;
+  var stored = localStorage.getItem('dg-theme');
+  var current = stored || (body.classList.contains('theme-light') ? 'light' : 'dark');
+
+  function apply(theme) {
+    body.classList.remove('theme-dark', 'theme-light');
+    body.classList.add('theme-' + theme);
+    btn.setAttribute('data-theme', theme);
+    localStorage.setItem('dg-theme', theme);
+  }
+
+  apply(current);
+
+  btn.addEventListener('click', function() {
+    apply(btn.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+})();
+</script>
