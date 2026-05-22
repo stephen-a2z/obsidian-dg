@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-技术分享/Playwright 自动登录实战：CDP 与 Camoufox 两条路线对比/","tags":["playwright","指纹浏览器","cdp","自动化","反检测"],"noteIcon":"","created":"2026-04-21T15:00:16.890+08:00","updated":"2026-04-21T15:00:16.895+08:00"}
+{"dg-publish":true,"permalink":"/01-技术分享/Playwright 自动登录实战：CDP 与 Camoufox 两条路线对比/","tags":["playwright","指纹浏览器","cdp","自动化","反检测"],"noteIcon":"","created":"2026-04-21T15:00:16.890+08:00","updated":"2026-05-08T12:03:01.081+08:00"}
 ---
 
 
@@ -296,19 +296,19 @@ async def login_once_reuse_forever():
 
 ### 反检测能力
 
-| 检测维度 | CDP + Chrome | CDP + Stealth | Camoufox |
-|----------|-------------|---------------|----------|
-| `navigator.webdriver` | ❌ 暴露 | ⚠️ JS 伪造，可被反制 | ✅ 引擎层返回 undefined |
-| CDP 协议痕迹 | ❌ 可检测 | ⚠️ 部分隐藏 | ✅ 不使用 CDP，用 Juggler |
-| Playwright 注入变量 | ❌ 可检测 | ⚠️ 部分隐藏 | ✅ 沙箱隔离，页面看不到 |
-| Canvas 指纹 | ❌ 真实值暴露 | ⚠️ 噪声注入，可检测注入行为 | ✅ C++ 层伪造 |
-| WebGL 指纹 | ❌ 真实值暴露 | ⚠️ 部分伪造 | ✅ C++ 层伪造 |
-| AudioContext | ❌ 真实值暴露 | ❌ 通常不处理 | ✅ C++ 层伪造 |
-| 字体枚举 | ❌ 真实值暴露 | ❌ 通常不处理 | ✅ 伪造 + 匹配目标 OS |
-| WebRTC IP 泄露 | ❌ 泄露真实 IP | ⚠️ 可禁用但行为异常 | ✅ 协议层伪造 |
-| TLS 指纹 (JA3/JA4) | ⚠️ Chromium 特征 | ⚠️ 同左 | ✅ Firefox 特征，更难识别 |
-| Worker 线程一致性 | ❌ stealth 不覆盖 Worker | ❌ 同左 | ✅ 引擎层修改，全局一致 |
-| `toString()` 检测 | ❌ 暴露 JS 覆写 | ⚠️ 部分处理 | ✅ 原生返回 `[native code]` |
+| 检测维度                  | CDP + Chrome         | CDP + Stealth   | Camoufox               |
+| --------------------- | -------------------- | --------------- | ---------------------- |
+| `navigator.webdriver` | ❌ 暴露                 | ⚠️ JS 伪造，可被反制   | ✅ 引擎层返回 undefined      |
+| CDP 协议痕迹              | ❌ 可检测                | ⚠️ 部分隐藏         | ✅ 不使用 CDP，用 Juggler    |
+| Playwright 注入变量       | ❌ 可检测                | ⚠️ 部分隐藏         | ✅ 沙箱隔离，页面看不到           |
+| Canvas 指纹             | ❌ 真实值暴露              | ⚠️ 噪声注入，可检测注入行为 | ✅ C++ 层伪造              |
+| WebGL 指纹              | ❌ 真实值暴露              | ⚠️ 部分伪造         | ✅ C++ 层伪造              |
+| AudioContext          | ❌ 真实值暴露              | ❌ 通常不处理         | ✅ C++ 层伪造              |
+| 字体枚举                  | ❌ 真实值暴露              | ❌ 通常不处理         | ✅ 伪造 + 匹配目标 OS         |
+| WebRTC IP 泄露          | ❌ 泄露真实 IP            | ⚠️ 可禁用但行为异常     | ✅ 协议层伪造                |
+| TLS 指纹 (JA3/JA4)      | ⚠️ Chromium 特征       | ⚠️ 同左           | ✅ Firefox 特征，更难识别      |
+| Worker 线程一致性          | ❌ stealth 不覆盖 Worker | ❌ 同左            | ✅ 引擎层修改，全局一致           |
+| `toString()` 检测       | ❌ 暴露 JS 覆写           | ⚠️ 部分处理         | ✅ 原生返回 `[native code]` |
 
 ### 为什么 Juggler 比 CDP 更隐蔽
 
@@ -358,13 +358,13 @@ Camoufox 使用 BrowserForge 生成指纹，确保所有参数匹配真实设备
 
 ## 五、性能与资源对比
 
-| 指标 | CDP + Chrome | Camoufox |
-|------|-------------|----------|
-| 启动时间 | ~1-2s | ~2-3s（首次需下载二进制 ~300MB） |
-| 内存占用 | ~150-300MB | ~200-400MB |
-| 页面加载速度 | 快（V8 引擎优化好） | 略慢（Firefox 引擎） |
-| Chromium 专属网站兼容性 | ✅ 完美 | ⚠️ 极少数 Chrome-only 功能不支持 |
-| 并发能力 | 高 | 中等（指纹生成有开销） |
+| 指标               | CDP + Chrome | Camoufox                 |
+| ---------------- | ------------ | ------------------------ |
+| 启动时间             | ~1-2s        | ~2-3s（首次需下载二进制 ~300MB）   |
+| 内存占用             | ~150-300MB   | ~200-400MB               |
+| 页面加载速度           | 快（V8 引擎优化好）  | 略慢（Firefox 引擎）           |
+| Chromium 专属网站兼容性 | ✅ 完美         | ⚠️ 极少数 Chrome-only 功能不支持 |
+| 并发能力             | 高            | 中等（指纹生成有开销）              |
 
 ## 六、怎么选
 
